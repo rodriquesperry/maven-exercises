@@ -3,7 +3,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class MavenExercise {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
