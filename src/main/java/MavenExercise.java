@@ -6,14 +6,19 @@ import java.util.Scanner;
 public class MavenExercise {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please Enter Something: ");
-        String userInput = scanner.nextLine();
-        if (!StringUtils.isNumeric(userInput)) {
-            System.out.println(userInput + " is not a number");
-            System.out.println(StringUtils.swapCase(userInput));
-            System.out.println(StringUtils.reverse(userInput));
-        }
+        String userInput;
+        do {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Please Enter Something: ");
+            userInput = scanner.nextLine();
+            if (!StringUtils.isNumeric(userInput)) {
+                System.out.println(userInput + " is not a number");
+                System.out.println(StringUtils.swapCase(userInput));
+                System.out.println(StringUtils.reverse(userInput));
+            } else {
+                System.out.println("Please enter something other than a number.");
+            }
+        } while (StringUtils.isNumeric(userInput));
     }
 
 
